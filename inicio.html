@@ -1,37 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-          <meta charset="UTF-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Document</title>
-          <script src="variables.js"></script>
-          <script src="main.js"></script>
-          <script src="objetos.js"></script>
-</head>
-<body>
-          <header>
-                    <h1>BIENVENIDO</h1>
-                    <h2>sistema de confeccion de listados, calculo de licencias y conceptos</h2>
-          </header>
-          
-          <nav>
-                    <ul>
-                              <li>LICENCIAS</li>
-                              <li>CONCEPTO</li>
-                              <li>LISTADOS</li>
-                    </ul>
-                    
-          </nav>
-
-          <footer>
-                    <h3>contacto</h3>
-                <ul>
-                    <li>telefono</li>
-                    <li>correo</li>
-                </ul>   
-          </footer>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="variables.js"></script>
+    <script defer src="objetos.js"></script>
+    <script defer src="funcionesDom.js"></script>
+  </head>
+  <body>
 
 
-</body>
+    <header>
+        <h1>Bienvenido al sistema de confeccion de listados, calculo de licencias y conceptos</h1>
+    </header>
+
+    <main id="mainDeCarga">     
+        <button id="clickDeIngreso" type="submit">INGRESAR AL SELECTOR DE OPERACIONES</button>
+         <div id="contenedorFormIngreso"></div>
+    </main>
+
+
+
+
+
+    <div id="contenedorFormCarga"></div>
+
+    <div id="barraDeBusqueda"></div>
+
+    <div id="selectorBusqueda"></div>
+
+    <main id="seccionDeConceptos"></main>
+
+    <main id="seccionDeLicencias"></main>
+
+
+     <!-- 
+     <footer>
+      <h2></h2>
+      <h3>contacto</h3>
+      <ul>
+        <li>telefono</li>
+        <li>correo</li>
+      </ul>
+    </footer>
+   -->
+   
+
+  </body>
 </html>

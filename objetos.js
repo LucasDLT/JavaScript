@@ -25,26 +25,32 @@ class Efectivo {
 //DOS OBJETOS PARA PUSHEAR AL ARRAY VACIO
 
 
-const gomez = new Efectivo("paula", 'gomez', "oficial", 111, 15, "chofer",
-4, 5);
-const perez = new Efectivo("sebastian", "perez", "mayor", 222, 15, "encargado",
-6, 7);
-const sastre = new Efectivo("lucas", "sastre", "mayor", 1234, 15, "encargado", 1, 1)
-const soto = new Efectivo("paula", 'soto', "oficial", 111, 15, "chofer",
-4, 5);
-const persa = new Efectivo("paula", 'persa', "oficial", 111, 15, "chofer",
-4, 5);
+const gomez = new Efectivo("paula", 'gomez', "oficial", 1114, 11, "faccion", 8, 5);
+const perez = new Efectivo("sebastian", "perez", "oficial", 222, 11, "faccion", 5, 8);
+const sastre = new Efectivo("lucas", "sastre", "oficial", 1234, 11, "faccion", 1, 1)
+const soto = new Efectivo("paula", 'soto', "oficial", 1131, 11, "faccion", 4, 5);
+const persa = new Efectivo("paula", 'persa', "oficial", 1141, 11, "faccion", 4, 5);
+const monte = new Efectivo("nahuel", "monte", "oficial mayor", 3453, 15, "chofer", 0, 0)
+const navarro = new Efectivo("cristian", "navarro", "oficial mayor", 1155, 15, "chofer", 3, 3)
+const chamorro = new Efectivo("nahuel", "chamorro", "oficial mayor", 1355, 15, "chofer", 6, 6)
+const paz = new Efectivo("cristian", "paz", "oficial mayor", 1145, 15, "chofer", 0, 1)
+const galarza = new Efectivo("alejandro", "galarza", "inspector", 1955, 21, "encargado", 0, 0)
+const benitez = new Efectivo("carlos", "benitez", "inspector", 1105, 21, "encargado", 0, 0)
+const toribio = new Efectivo("celeste", "toribio", "inspector", 105, 21, "encargado", 0, 0)
+const plantez = new Efectivo("pablo", "plantez", "inspector", 4105, 21, "encargado", 6, 0)
+const pereyra = new Efectivo("ariel", "pereyra", "inspector", 1553, 21, "encargado", 0, 0)
+const rodriguez = new Efectivo("pablo", "rodriguez", "principal", 1765, 25, "jefe de servicio", 4, 2)
+
+//PUSH DE OBJETOS
     
-    //PUSH DE OBJETOS
-    
-listaPersonal.push(gomez, perez, sastre, persa, soto);
+listaPersonal.push(gomez, perez, sastre, persa, soto, monte, navarro, chamorro, paz, galarza, benitez, toribio, plantez, pereyra, rodriguez);
   
     
-  //gomez.cantidadFaltas()
-  //gomez.cantidadSanciones()
+//gomez.cantidadFaltas()
+//gomez.cantidadSanciones()
 
 //FUNCION PARA AGREGAR OBJETOS MEDIANTE PROMPT
-/*
+
 function crearPersonal(){
           //debugger
           let nombre = prompt("ingresa el nombre:") 
@@ -61,49 +67,90 @@ function crearPersonal(){
             return nuevoIngreso
           }
         
-        //FUNCION PARA AGREGAR AL ARRAY CON PUSH
+//FUNCION PARA AGREGAR AL ARRAY CON PUSH
         
-          function ingresarAlListado () {
-            const paraIngresar=crearPersonal()
-            listaPersonal.push(paraIngresar)
-             
-          }
-ingresarAlListado()
+function ingresarAlListado () {
+         const paraIngresar=crearPersonal()
+         listaPersonal.push(paraIngresar)
+        }
+//ingresarAlListado()
 
 
-
-//FOR EACH
-function recorrerListado(){
-          listaPersonal.forEach((efectivo)=>{
-            console.log(efectivo);
-          })
-}*/
 
 //FUNCION BUSQUEDA EN ARRAY POR LEGAJO (CON FIND)
 
 function buscarPorLegajo(){
   
   debugger
-  let busqueda = prompt("ingresar el legajo")
+  let busqueda = Number(prompt("ingresar el legajo"))
   let resultadoBusqueda = listaPersonal.find((efectivo)=> efectivo.legajo === parseInt(busqueda))
-  console.log(resultadoBusqueda.apellido + " tiene " + resultadoBusqueda["sanciones"] + " sanciones")
-  
-  if ((resultadoBusqueda.sanciones > 5) && (resultadoBusqueda.faltas > 5)) {
-    console.log("tiene mas de 5 sanciones y mas de 5 faltas");
-
-  } else if((resultadoBusqueda.sanciones < 5) && (resultadoBusqueda.faltas < 5)) {
-    console.log("tiene 5, o menos sanciones y faltas");
-  }
-
-  if (resultadoBusqueda.faltas > 5) {
-    console.log("tiene mas de 5 faltas");    
+  //console.log(resultadoBusqueda.apellido + " tiene " + resultadoBusqueda["sanciones"] + " sanciones")
+  if (resultadoBusqueda) {
+    console.log(resultadoBusqueda);
+    verificarFaltas(resultadoBusqueda)
+    verificarSanciones(resultadoBusqueda)
+    verificarConcepto(resultadoBusqueda)
   } else {
-    console.log("tiene 5, o menos faltas");
+    console.log("no se encontro ningun legajo");   
   }
 }
 
+function verificarFaltas(efectivo){
 
-//FUNCION FILTRAR ARRAY POR PROPIEDADES DEL OBJETO (CON FILTER)
+  debugger
+  if (efectivo.faltas === 5) {
+    console.log("tiene 5 faltas");
+  
+  } 
+  if(efectivo.faltas < 5) {
+    console.log("tiene menos de 5 faltas");
+  }
+  
+  if (efectivo.faltas > 5) {
+    console.log("tiene mas de 5 faltas");    
+  } 
+  if (efectivo.faltas === 0) {
+    console.log("no tiene faltas");
+  }
+}
+
+function verificarSanciones(efectivo){
+
+  debugger
+  if (efectivo.sanciones === 5) {
+    console.log("tiene 5 sanciones");
+  }
+  
+  if (efectivo.sanciones > 5) {
+    console.log("tiene mas de 5 sanciones");
+  }
+  if (efectivo.sanciones < 5) {
+    console.log("tiene menos de 5 sanciones");    
+  }
+  if (efectivo.sanciones === 0) {
+    console.log("no tiene sanciones");    
+  }
+}
+
+function verificarConcepto(efectivo){
+  debugger
+  
+if ((efectivo.sanciones < 7) && (efectivo.faltas < 7)) {
+  console.log("bueno");
+  }
+if ((efectivo.sanciones === 0) && (efectivo.faltas === 0)) {
+    console.log("excelente")  
+  }
+  if (((efectivo.sanciones < 7) && (efectivo.faltas > 7)) || ((efectivo.sanciones > 7) && (efectivo.faltas < 7))) {
+    console.log("regular");
+  } 
+  
+if ((efectivo.sanciones > 7) && (efectivo.faltas > 7)) {
+    console.log("malo");
+}
+}
+
+//FUNCION FILTRAR ARRAY POR PROPIEDADES DEL OBJETO (CON FILTER) SE PUEDE HACER UN WHILE CON LA VALIDACION DE ENTRADA QUE SEA MIENTRAS TAL COSA SEA TRUE, Y QUE SE CORTE SI ENTRA EN ALGUNA OPCION.
 
 function filtrarListado (){
 debugger
@@ -138,10 +185,36 @@ debugger
 }
 
 
+//FUNCION PARA ARMAR LISTADOS CON MAP y SORT/REVERSE PARA ORDENAR
+//POR FUNCIONES
+function confeccionaListadosFunciones (){
+        const listaDeFunciones = listaPersonal.map((efectivo)=>{
+          return {
+            legajo: efectivo.legajo,
+            nombre: efectivo.nombre,
+            apellido: efectivo.apellido, 
+            funcion: efectivo.funcion
+          }
+        })
+        console.table(listaDeFunciones.sort().reverse());
+}
+//POR JERARQUIAS
+function confeccionaListadosJerarquias(){
+        const listaDeJerarquias = listaPersonal.map((efectivo)=>{
+          return{
+            legajo: efectivo.legajo,
+            nombre: efectivo.nombre,
+            apellido: efectivo.apellido, 
+            funcion: efectivo.jerarquia
+          }
+        })
+        console.table(listaDeJerarquias.sort().reverse());
+}
 
 
 
- 
+
+
 //FUNCION PARA RESTAR LOS DIAS
 
  /* function restaDias() {
@@ -177,11 +250,3 @@ debugger
 
 
 
-//FUNCION PARA CONCEPTO
-
-//TIENE QUE TENER PARAMETROS COMO, DIAS DE LICENCIA MEDICA, FUNCION Y SANCIONES,
-
-//hacer un if else con INFORMACION lo que esta declarado arriba
-//ahi se guardotodoa la informacion de GOMEZ
-// entonces evaluas lo que guardo esa CONSTANTE
-//y si ahi adentro hay FALTAS Y SANCIONES*/
