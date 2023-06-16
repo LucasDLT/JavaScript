@@ -152,64 +152,6 @@ if ((efectivo.sanciones > 7) && (efectivo.faltas > 7)) {
 
 //FUNCION FILTRAR ARRAY POR PROPIEDADES DEL OBJETO (CON FILTER) SE PUEDE HACER UN WHILE CON LA VALIDACION DE ENTRADA QUE SEA MIENTRAS TAL COSA SEA TRUE, Y QUE SE CORTE SI ENTRA EN ALGUNA OPCION.
 
-function filtrarListado (){
-debugger
-  
-  let preguntaParaFiltrar = prompt("ingresa el parametro a buscar entre: JERARQUIA, APELLIDO y FUNCION")
-
-  if (preguntaParaFiltrar.toUpperCase() === "FUNCION") {
-    let preguntaFuncion = prompt("ingresa la funcion que buscas: CHOFER, ENCARGADO, ETC")
-        let resultadoFuncion = listaPersonal.filter((efectivo)=>efectivo.funcion.toUpperCase() === preguntaFuncion.toUpperCase())
-        console.log(resultadoFuncion);
-  }
-
-  else if (preguntaParaFiltrar.toUpperCase() === "APELLIDO") {
-    let preguntaApellido = prompt("ingresa el apellido: ")
-    let resultadoApellido = listaPersonal.filter((efectivo)=>efectivo.apellido.toUpperCase() === preguntaApellido.toUpperCase())
-    console.log(resultadoApellido);
-  }
-
-  else if (preguntaParaFiltrar.toUpperCase() === "JERARQUIA") {
-    let preguntaJerarquia = prompt("ingresa la jerarquia buscada: ")
-    let resultadoJerarquia = listaPersonal.filter((efectivo)=>efectivo.jerarquia.toUpperCase() === preguntaJerarquia.toUpperCase())
-    console.log(resultadoJerarquia);
-  }
-  
-  else if (preguntaParaFiltrar === ""){
-    console.log("no ingresaste ningun parametro que buscar"); 
-  }
-
-  else if(preguntaParaFiltrar !== isNaN()){
-    console.log("el parametro ingresado es numerico, no es valido");
-  }
-}
-
-
-//FUNCION PARA ARMAR LISTADOS CON MAP y SORT/REVERSE PARA ORDENAR
-//POR FUNCIONES
-function confeccionaListadosFunciones (){
-        const listaDeFunciones = listaPersonal.map((efectivo)=>{
-          return {
-            legajo: efectivo.legajo,
-            nombre: efectivo.nombre,
-            apellido: efectivo.apellido, 
-            funcion: efectivo.funcion
-          }
-        })
-        console.table(listaDeFunciones.sort().reverse());
-}
-//POR JERARQUIAS
-function confeccionaListadosJerarquias(){
-        const listaDeJerarquias = listaPersonal.map((efectivo)=>{
-          return{
-            legajo: efectivo.legajo,
-            nombre: efectivo.nombre,
-            apellido: efectivo.apellido, 
-            funcion: efectivo.jerarquia
-          }
-        })
-        console.table(listaDeJerarquias.sort().reverse());
-}
 
 
 
