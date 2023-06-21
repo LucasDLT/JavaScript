@@ -1,12 +1,15 @@
-function retornaJsonListaPersonal(){
-          const retornoJsonListaPersonal = JSON.parse(jsonNuevaLista)
-          return retornoJsonListaPersonal          
+/*function retornaJsonListaPersonal(){
+  return retornoJsonListaPersonal          
 }
+retornaJsonListaPersonal()
 
 function retornaJsonNuevaLista(){
-          const retornoJsonNuevaLista = JSON.parse(jsonListaPersonal)
-          return retornoJsonNuevaLista
+  return retornoJsonNuevaLista
 }
+retornaJsonListaPersonal()*/
+const retornoJsonNuevaLista = JSON.parse(jsonNuevaLista)
+const retornoJsonListaPersonal = JSON.parse(jsonListaPersonal)
+
 
 function selectorFunciones(){
           eventosBotonChoferes()
@@ -74,7 +77,8 @@ function eventosBotonTareasInternas(){
 
 function confeccionaListadoChoferes(){
           cargaListaDeFunciones.innerHTML=``
-          const listaChoferes = listaPersonal.filter((efectivo)=>efectivo.funcion === "chofer".toUpperCase())
+
+          const listaChoferes = retornoJsonListaPersonal.filter((efectivo)=>efectivo.funcion === "chofer".toUpperCase())
           const listaSoloChoferes = listaChoferes.map((efectivo)=>{
           cargaListaDeFunciones.innerHTML += estructuraListaFunciones(efectivo)
           })
