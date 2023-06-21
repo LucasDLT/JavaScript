@@ -9,6 +9,16 @@ function botonDeIngreso() {
 }
 botonDeIngreso()
 
+function botonAdministrarPersonal() {
+          botonAdministrar.addEventListener("click",()=>{
+            location.href ="formularioDeCarga.html"
+          })
+          botonAdministrar.addEventListener("mousemove",()=>{
+            botonAdministrar.title ="administrar personal"
+          })
+}
+botonAdministrarPersonal()
+
 function agregarSelector() {
   mainDeCarga.innerHTML = ` 
           <nav>
@@ -52,4 +62,5 @@ function agregarSelector() {
           botonListado.title="ingresar a listados"
           })
 }
+
 

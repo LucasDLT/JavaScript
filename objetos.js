@@ -42,116 +42,13 @@ const pereyra = new Efectivo("ariel", "pereyra", "inspector", 1553, 21, "encarga
 const rodriguez = new Efectivo("pablo", "rodriguez", "principal", 1765, 25, "jefe de servicio", 4, 2)
 
 //PUSH DE OBJETOS
-    
-listaPersonal.push(gomez, perez, sastre, persa, soto, monte, navarro, chamorro, paz, galarza, benitez, toribio, plantez, pereyra, rodriguez);
-  
+
+  listaPersonal.push(gomez, perez, sastre, persa, soto, monte, navarro, chamorro, paz, galarza, benitez, toribio, plantez, pereyra, rodriguez);
+  const jsonListaPersonal =jsonListaPersonal = localStorage.setItem("listaExistente", JSON.stringify(listaPersonal))
+
     
 //gomez.cantidadFaltas()
 //gomez.cantidadSanciones()
-
-//FUNCION PARA AGREGAR OBJETOS MEDIANTE PROMPT
-
-function crearPersonal(){
-          //debugger
-          let nombre = prompt("ingresa el nombre:") 
-          let apellido = prompt("ingresa el apellido:")
-          let jerarquia = prompt("ingresa la jerarquia:")
-          let legajo = prompt("ingresa el legajo")
-          let totalDias = prompt("ingresa el total de dias:")
-          let funcion = prompt("ingresa la funcion: ")
-          let faltas = prompt("ingresa la cantidad de faltas")
-          let sanciones = prompt("ingresa la cantidad de sanciones") 
-          
-          const nuevoIngreso = new Efectivo(nombre, apellido, jerarquia,
-            legajo, totalDias, funcion, faltas, sanciones)
-            return nuevoIngreso
-          }
-        
-//FUNCION PARA AGREGAR AL ARRAY CON PUSH
-        
-function ingresarAlListado () {
-         const paraIngresar=crearPersonal()
-         listaPersonal.push(paraIngresar)
-        }
-//ingresarAlListado()
-
-
-
-//FUNCION BUSQUEDA EN ARRAY POR LEGAJO (CON FIND)
-
-function buscarPorLegajo(){
-  
-  debugger
-  let busqueda = Number(prompt("ingresar el legajo"))
-  let resultadoBusqueda = listaPersonal.find((efectivo)=> efectivo.legajo === parseInt(busqueda))
-  //console.log(resultadoBusqueda.apellido + " tiene " + resultadoBusqueda["sanciones"] + " sanciones")
-  if (resultadoBusqueda) {
-    console.log(resultadoBusqueda);
-    verificarFaltas(resultadoBusqueda)
-    verificarSanciones(resultadoBusqueda)
-    verificarConcepto(resultadoBusqueda)
-  } else {
-    console.log("no se encontro ningun legajo");   
-  }
-}
-
-function verificarFaltas(efectivo){
-
-  debugger
-  if (efectivo.faltas === 5) {
-    console.log("tiene 5 faltas");
-  
-  } 
-  if(efectivo.faltas < 5) {
-    console.log("tiene menos de 5 faltas");
-  }
-  
-  if (efectivo.faltas > 5) {
-    console.log("tiene mas de 5 faltas");    
-  } 
-  if (efectivo.faltas === 0) {
-    console.log("no tiene faltas");
-  }
-}
-
-function verificarSanciones(efectivo){
-
-  debugger
-  if (efectivo.sanciones === 5) {
-    console.log("tiene 5 sanciones");
-  }
-  
-  if (efectivo.sanciones > 5) {
-    console.log("tiene mas de 5 sanciones");
-  }
-  if (efectivo.sanciones < 5) {
-    console.log("tiene menos de 5 sanciones");    
-  }
-  if (efectivo.sanciones === 0) {
-    console.log("no tiene sanciones");    
-  }
-}
-
-function verificarConcepto(efectivo){
-  debugger
-  
-if ((efectivo.sanciones < 7) && (efectivo.faltas < 7)) {
-  console.log("bueno");
-  }
-if ((efectivo.sanciones === 0) && (efectivo.faltas === 0)) {
-    console.log("excelente")  
-  }
-  if (((efectivo.sanciones < 7) && (efectivo.faltas > 7)) || ((efectivo.sanciones > 7) && (efectivo.faltas < 7))) {
-    console.log("regular");
-  } 
-  
-if ((efectivo.sanciones > 7) && (efectivo.faltas > 7)) {
-    console.log("malo");
-}
-}
-
-//FUNCION FILTRAR ARRAY POR PROPIEDADES DEL OBJETO (CON FILTER) SE PUEDE HACER UN WHILE CON LA VALIDACION DE ENTRADA QUE SEA MIENTRAS TAL COSA SEA TRUE, Y QUE SE CORTE SI ENTRA EN ALGUNA OPCION.
-
 
 
 
@@ -188,7 +85,3 @@ if ((efectivo.sanciones > 7) && (efectivo.faltas > 7)) {
 }
 
 //restaDias();*/
-
-
-
-

@@ -1,56 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-          <meta charset="UTF-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Document</title>
-</head>
-<body>
-          <header>
-                    <h1>LISTADOS</h1>
-          </header>
-          <main>
-                    <form action="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="variables.js"></script> 
+    <script defer src="formularioDeCarga.js"></script>
+    <script defer src="objetos.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>SECCION DE CARGA DE DATOS</h1>
+    </header>
+    <main>
+      <form action="">
+        <ul>
+          <li>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" />
+          </li>
+          <li>
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" id="apellido"/>
+          </li>
+          <li>
+            <label for="jerarquia">Jerarquia:</label>
+            <input type="text" name="jerarquia" id="jerarquia" />
+          </li>
+          <li>
+            <label for="legajo">Legajo:</label>
+            <input type="number" id="legajo" />
+          </li>
+          <li>
+            <label for="total dias">Total de dias:</label>
+            <input type="number" id="totalDias"/>
+          </li>
+          <li>
+            <label for="funcion">Funcion:</label>
+            <input type="text" id="funcion" />
+          </li>
+          <li>
+            <label for="faltas">Faltas:</label>
+            <input type="number" id="faltas"/>
+          </li>
+          <li>
+            <label for="sanciones">Sanciones:</label>
+            <input type="number" id="sanciones"/>
+          </li>
+        </ul>
+        <button type="button" id="botonCargarFormulario" value="">CARGAR FORMULARIO</button>
+        <button type="reset" id="limpiarFormulario">LIMPIAR FORMULARIO</button>
+        <button type="button" id="inicio">INICIO</button>
 
-                    <ul>
-                              <li>
-                                        <label for="nombre">Nombre:</label>
-                                        <input type="text" name="Nombre">
-                              </li>
-                              <li>
-                                        <label for="apellido">Apellido:</label>
-                                        <input type="text" name="Apellido">
-                              </li>
-                              <li>
-                                        <label for="jerarquia">Jerarquia:</label>
-                                        <input type="text" name="jerarquia">
-                              </li> 
-                              <li>
-                                        <label for="legajo">Legajo:</label>
-                                        <input type="text">
-                              </li>
-                              <li>
-                                        <label for="total dias">Total de dias:</label>
-                                        <input type="text">
-                              </li>
-                              <li>
-                                        <label for="funcion">Funcion:</label>
-                                        <input type="text">
-                              </li>
-                              <li>
-                                        <label for="faltas">Faltas:</label>
-                                        <input type="text">
-                              </li>
-                              <li>
-                                        <label for="sanciones">Sanciones:</label>
-                                        <input type="text">
-                              </li>
-                              </ul>
-                              <button type="submit">CARGAR FORMULARIO</button>
-                              <button type="reset">LIMPIAR FORMULARIO</button>
-
-                    </form>
-          </main>
-</body>
+      </form>
+    </main>
+  </body>
 </html>

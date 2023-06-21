@@ -1,8 +1,7 @@
 function selectorListado (){           
           eventosBotonFunciones()
           eventosBotonJerarquias()
-          eventosBotonListadoGeneral()   
-            
+          eventosBotonListadoGeneral()              
 }
 selectorListado ()
 
@@ -13,7 +12,6 @@ function eventosBotonFunciones(){
           })
           botonListadoFunciones.addEventListener("click",()=>{
           location.href = "seccionDeListas.html"
-          
           })      
 }
 
@@ -35,25 +33,14 @@ function eventosBotonListadoGeneral(){
 }
 /*-------------------------------------------------------------------------------*/
 
-
-
-
-
-
-
-
-
-
-
-
 function confeccionaListadoGeneral() {
           seccionListas.innerHTML=``
-          const listaGeneral = listaPersonal.map((efectivo) => {
+          const listaGeneral = listaPersonal.map((efectivo) =>  {
           seccionListas.innerHTML += cargarListados(efectivo);
           });
           return listaGeneral
-
 }     
+
 function cargarListados(efectivo) {
   return `<br></br>
           <tr>
@@ -72,15 +59,7 @@ function cargarListados(efectivo) {
           </tr>`;
 }
 
-
-
-
-
-
-function botonListadoChoferes(){
-          
-}
-          
+     
 
 function confeccionaListadosFunciones (){
           seccionListas.innerHTML = ``
@@ -117,12 +96,4 @@ function confeccionaListadosJerarquias(){
                     }
                   })
                   console.table(listaDeJerarquias.sort().reverse());
-          }
-
-
-
-
-
-
-
-
+}
