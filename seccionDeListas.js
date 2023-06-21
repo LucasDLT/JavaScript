@@ -1,3 +1,13 @@
+function retornaJsonListaPersonal(){
+          const retornoJsonListaPersonal = JSON.parse(jsonNuevaLista)
+          return retornoJsonListaPersonal          
+}
+
+function retornaJsonNuevaLista(){
+          const retornoJsonNuevaLista = JSON.parse(jsonListaPersonal)
+          return retornoJsonNuevaLista
+}
+
 function selectorFunciones(){
           eventosBotonChoferes()
           eventosBotonEncargados()

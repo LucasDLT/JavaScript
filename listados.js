@@ -33,6 +33,8 @@ function eventosBotonListadoGeneral(){
 }
 /*-------------------------------------------------------------------------------*/
 
+
+
 function confeccionaListadoGeneral() {
           seccionListas.innerHTML=``
           const listaGeneral = listaPersonal.map((efectivo) =>  {
@@ -63,6 +65,7 @@ function cargarListados(efectivo) {
 
 function confeccionaListadosFunciones (){
           seccionListas.innerHTML = ``
+          
           listaPersonal.filter((efectivo)=>efectivo.funcion)
           const listaDeFunciones = listaPersonal.map((efectivo)=>{
           seccionListas.innerHTML += cargarListadoFuncion (efectivo)

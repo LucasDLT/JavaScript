@@ -1,4 +1,4 @@
-function retornaJsonListaPersonal(){
+/*function retornaJsonListaPersonal(){
           const retornoJsonListaPersonal = JSON.parse(jsonNuevaLista)
           return retornoJsonListaPersonal          
 }
@@ -6,7 +6,7 @@ function retornaJsonListaPersonal(){
 function retornaJsonNuevaLista(){
           const retornoJsonNuevaLista = JSON.parse(jsonListaPersonal)
           return retornoJsonNuevaLista
-}
+}*/
 
 /*FUNCION BUSQUEDA EN ARRAY POR LEGAJO (CON FIND)
 

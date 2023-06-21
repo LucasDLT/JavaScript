@@ -1,8 +1,7 @@
 const listaPersonal = []
 const nuevaListaDePersonal = []
 const listaIntegrada = []
-const jsonNuevaLista = []
-const jsonListaPersonal =[]
+
 
 const seccionListas = document.getElementById("seccionDeListas")
 const botonListadoJerarquias = document.getElementById("botonListadoJerarquias")

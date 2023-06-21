@@ -44,7 +44,7 @@ const rodriguez = new Efectivo("pablo", "rodriguez", "principal", 1765, 25, "jef
 //PUSH DE OBJETOS
 
   listaPersonal.push(gomez, perez, sastre, persa, soto, monte, navarro, chamorro, paz, galarza, benitez, toribio, plantez, pereyra, rodriguez);
-  const jsonListaPersonal =jsonListaPersonal = localStorage.setItem("listaExistente", JSON.stringify(listaPersonal))
+  jsonListaPersonal = localStorage.setItem("listaExistente", JSON.stringify(listaPersonal))
 
     
 //gomez.cantidadFaltas()
