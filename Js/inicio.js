@@ -21,8 +21,8 @@ botonAdministrarPersonal()
 
 function agregarSelector() {
   mainDeCarga.innerHTML = ` 
-          <nav>
-          <ul>
+          <nav class="contenedorSelector">
+          <ul class="contenedorBotones">
           <li><button type="submit" id = "botonLicencias">LICENCIAS</button></li>
           <li><button type="submit" id="botonConceptos">CONCEPTOS</button></li>
           <li><button type="submit" id="botonListados">LISTADOS</button></li>

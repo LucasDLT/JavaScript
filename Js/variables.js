@@ -1,5 +1,4 @@
 const listaPersonal = []
-const nuevaListaDePersonal = []
 const listaIntegrada = []
 
 const seccionListas = document.getElementById("seccionDeListas")
@@ -22,3 +21,4 @@ const botonCargaFormulario = document.getElementById("botonCargarFormulario");
 const botonAlInicio = document.getElementById("inicio")
 const botonAdministrar = document.getElementById("botonAdministrar")
 
+const verificacionCarga = document.getElementById("verificacionDeDatos")

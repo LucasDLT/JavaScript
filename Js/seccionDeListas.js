@@ -1,5 +1,3 @@
-//const retornoJsonNuevaLista = JSON.parse(jsonNuevaLista)
-
 function selectorFunciones(){
           eventosBotonChoferes()
           eventosBotonEncargados()
@@ -66,8 +64,7 @@ function eventosBotonTareasInternas(){
 
 function confeccionaListadoChoferes(){
           cargaListaDeFunciones.innerHTML=``
-          const listaChoferes =   retornoJsonListaPersonal = JSON.parse(jsonListaPersonal)
-          .filter((efectivo)=>efectivo.funcion === "chofer".toUpperCase())
+          const listaChoferes = listaPersonal.filter((efectivo)=>efectivo.funcion === "chofer".toUpperCase())
           const listaSoloChoferes = listaChoferes.map((efectivo)=>{
           cargaListaDeFunciones.innerHTML += estructuraListaFunciones(efectivo)
           })

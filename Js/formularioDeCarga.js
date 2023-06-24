@@ -1,3 +1,22 @@
+function retornaJsonNuevaLista(){
+  
+  if ((localStorage.getItem("nuevaListaPersonal"))) {
+    return JSON.parse(localStorage.getItem("nuevaListaPersonal"))
+  }else{
+    return[]
+  }
+}
+//VERIFICAR QUE ESTO ESTA FUNCIONANDO CUANDO APRIETO EL CLICK
+//TENDRIA QUE SACAR DE ESA FUNCION LA PARTE DEL CODIGO QUE ME DEVUELVE EL JSON
+const nuevaListaDePersonal =  retornaJsonNuevaLista()
+if (nuevaListaDePersonal.length > 0) {
+        nuevaListaDePersonal.forEach(efectivo=>{
+        verificacionCarga.innerHTML += estructuraVerificaLista(efectivo)     
+        })          
+      }  
+//FUNCION PARA PASAR JSON A ARRAY
+
+
 function crearPersonal(){
         
   let nombre = document.getElementById("nombre").value;
@@ -41,9 +60,26 @@ function ingresarAlListado () {
       const paraIngresar=crearPersonal()
       nuevaListaDePersonal.push(paraIngresar)
       //const listaIntegrada = listaPersonal.concat(nuevaListaDePersonal)
-      const jsonNuevaLista= localStorage.setItem("nuevaListaPersonal", JSON.stringify(nuevaListaDePersonal))
-      return jsonNuevaLista
-    }
+      
+      localStorage.setItem("nuevaListaPersonal", JSON.stringify(nuevaListaDePersonal))
+      }
+
+function estructuraVerificaLista(efectivo){
+      return`<br></br> 
+      <tr>
+      <td>${efectivo.funcion}</td>
+        <td>${efectivo.jerarquia}</td>
+        <td>${efectivo.legajo}</td>
+        <td>${efectivo.nombre}</td>
+        <td>${efectivo.apellido}</td>
+        <td>
+        <button id=type="${efectivo.legajo}"
+        "submit">AGREGAR</button>
+        </td>
+      </tr>`
+}
+
+    
  
 function eventosBotonCargar(){
        botonCargaFormulario.addEventListener("mousemove",()=>{
@@ -85,3 +121,7 @@ function botonInicio() {
 }
 
 botonInicio()
+
+
+
+ 
