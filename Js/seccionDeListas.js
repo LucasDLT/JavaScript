@@ -72,12 +72,12 @@ function confeccionaListadoChoferes(){
 }
 
 function confeccionaListadoEncargados(){
-  cargaListaDeFunciones.innerHTML=``
-  const listaEncargados = listaPersonal.filter((efectivo)=>efectivo.funcion === "encargado".toUpperCase())
-  const listaSoloEncargados = listaEncargados.map((efectivo)=>{
-  cargaListaDeFunciones.innerHTML += estructuraListaFunciones(efectivo)
-  })
-  return listaSoloEncargados
+          cargaListaDeFunciones.innerHTML=``
+          const listaEncargados = listaPersonal.filter((efectivo)=>efectivo.funcion === "encargado".toUpperCase())
+          const listaSoloEncargados = listaEncargados.map((efectivo)=>{
+          cargaListaDeFunciones.innerHTML += estructuraListaFunciones(efectivo)
+          })
+          return listaSoloEncargados
 }
 
 function confeccionaListadoJefeDeServicio(){
@@ -116,7 +116,7 @@ function estructuraListaFunciones(efectivo){
             <td>${efectivo.nombre}</td>
             <td>${efectivo.apellido}</td>
             <td>
-            <button id=type="${efectivo.legajo}"
+            <button id="${efectivo.legajo}"
             "submit">AGREGAR</button>
             </td>
           </tr>`

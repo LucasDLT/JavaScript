@@ -6,10 +6,8 @@
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
           <script defer src="../Js/variables.js"></script>
-          <script defer src="../Js/objetos.js"></script>
-          <script defer src="../Js/funcionesDom.js"></script>
-      
-
+          <script defer src="../Js/objetos.js"></script>  
+ 
           <title>Document</title>
 </head>
 <body>
@@ -17,8 +15,9 @@
           <h2>Para optimizar tu busqueda, la misma se realizara mediante el Nro. de Legajo</h2>
           <div>
               <label for="Busqueda">Ingresa el numero de legajo:</label>
-              <input type="number">
-              <button type="button">BUSCAR</button>
+              <input type="number" id="inputBuscadorLicencia">
+              <button type="submit" id="botonBuscadorLicencia">BUSCAR</button>
           </div>
+          <div id="contenedorLicencia"></div>
 </body>
 </html>

@@ -22,3 +22,16 @@ const botonAlInicio = document.getElementById("inicio")
 const botonAdministrar = document.getElementById("botonAdministrar")
 
 const verificacionCarga = document.getElementById("verificacionDeDatos")
+
+const cargaListaDeJerarquias = document.getElementById("listasDeJerarquias")
+const botonOficial = document.getElementById("botonOficial")
+const botonOficialPrimero = document.getElementById("botonOficialPrimero")
+const botonOficialMayor = document.getElementById("botonOficialMayor")
+const botonInspector = document.getElementById("botonInspector")
+const botonPrincipal = document.getElementById("botonPrincipal")
+
+const contenedorConcepto = document.getElementById("contenedorConcepto")
+const botonBuscador = document.getElementById("botonBuscador")
+
+const contenedorLicencia = document.getElementById("contenedorLicencia")
+const botonBuscadorLicencia = document.getElementById("botonBuscadorLicencia")

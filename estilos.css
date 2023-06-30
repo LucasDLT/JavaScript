@@ -40,3 +40,31 @@
           color: black;
  
 }
+.mainFormulario{
+        display: flex;
+        justify-content: space-between;
+        
+}
+.muestraListado{
+        display: flex;
+        flex-direction: column;
+        border-style:solid;
+        padding: 1rem;
+        margin: 1rem;
+
+}
+.formularioDeIngreso{
+display: grid;   
+
+     
+}
+.headerCargaPersonal{
+        display: flex;
+        justify-content: center;
+}
+
+.barraInferior{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+}

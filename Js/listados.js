@@ -1,47 +1,45 @@
-function selectorListado (){           
-          eventosBotonFunciones()
-          eventosBotonJerarquias()
-          eventosBotonListadoGeneral()              
+function selectorListado() {
+  eventosBotonFunciones();
+  eventosBotonJerarquias();
+  eventosBotonListadoGeneral();
 }
-selectorListado ()
+selectorListado();
 
-
-function eventosBotonFunciones(){
-          botonListadoFunciones.addEventListener("mousemove",()=>{
-          botonListadoFunciones.title = "acceder al listado por funciones"
-          })
-          botonListadoFunciones.addEventListener("click",()=>{
-          location.href = "seccionDeListas.html"
-          })      
-}
-
-function eventosBotonJerarquias(){
-          botonListadoJerarquias.addEventListener("mousemove",()=>{
-          botonListadoJerarquias.title = "acceder al listado por jerarquias"          
-          })        
-          botonListadoJerarquias.addEventListener("click",()=>{
-          })
+function eventosBotonFunciones() {
+  botonListadoFunciones.addEventListener("mousemove", () => {
+    botonListadoFunciones.title = "acceder al listado por funciones";
+  });
+  botonListadoFunciones.addEventListener("click", () => {
+    location.href = "seccionDeListas.html";
+  });
 }
 
-function eventosBotonListadoGeneral(){
-          botonConfeccionarListados.addEventListener("mousemove",()=>{
-          botonConfeccionarListados.title = "confeccionar listado personalizado"
-          })
-          botonConfeccionarListados.addEventListener("click",()=>{
-          confeccionaListadoGeneral()         
-          })
+function eventosBotonJerarquias() {
+  botonListadoJerarquias.addEventListener("mousemove", () => {
+    botonListadoJerarquias.title = "acceder al listado por jerarquias";
+  });
+  botonListadoJerarquias.addEventListener("click", () => {
+    location.href = "seccionDeJerarquias.html";
+  });
+}
+
+function eventosBotonListadoGeneral() {
+  botonConfeccionarListados.addEventListener("mousemove", () => {
+    botonConfeccionarListados.title = "confeccionar listado personalizado";
+  });
+  botonConfeccionarListados.addEventListener("click", () => {
+    confeccionaListadoGeneral();
+  });
 }
 /*-------------------------------------------------------------------------------*/
 
-
-
 function confeccionaListadoGeneral() {
-          seccionListas.innerHTML=``
-          const listaGeneral = listaPersonal.map((efectivo) =>  {
-          seccionListas.innerHTML += cargarListados(efectivo);
-          });
-          return listaGeneral
-}     
+  seccionListas.innerHTML = ``;
+  const listaGeneral = listaPersonal.map((efectivo) => {
+    seccionListas.innerHTML += cargarListados(efectivo);
+  });
+  return listaGeneral;
+}
 
 function cargarListados(efectivo) {
   return `<br></br>
@@ -61,21 +59,17 @@ function cargarListados(efectivo) {
           </tr>`;
 }
 
-     
+function confeccionaListadosFunciones() {
+  seccionListas.innerHTML = ``;
 
-function confeccionaListadosFunciones (){
-          seccionListas.innerHTML = ``
-          
-          listaPersonal.filter((efectivo)=>efectivo.funcion)
-          const listaDeFunciones = listaPersonal.map((efectivo)=>{
-          seccionListas.innerHTML += cargarListadoFuncion (efectivo)
-                  
-                  })
-                  console.table(listaDeFunciones.sort().reverse());
-          }
+  listaPersonal.filter((efectivo) => efectivo.funcion);
+  const listaDeFunciones = listaPersonal.map((efectivo) => {
+    seccionListas.innerHTML += cargarListadoFuncion(efectivo);
+  });
+}
 
 function cargarListadoFuncion(efectivo) {
-                    return `<br></br>
+  return `<br></br>
                             <tr>
                             <td>${efectivo.funcion}</td>
                               <td>${efectivo.jerarquia}</td>
@@ -87,16 +81,15 @@ function cargarListadoFuncion(efectivo) {
                               "submit">AGREGAR</button>
                               </td>
                             </tr>`;
-                  }
+}
 
-function confeccionaListadosJerarquias(){
-          const listaDeJerarquias = listaPersonal.map((efectivo)=>{
-                    return{
-                      legajo: efectivo.legajo,
-                      nombre: efectivo.nombre,
-                      apellido: efectivo.apellido, 
-                      funcion: efectivo.jerarquia
-                    }
-                  })
-                  console.table(listaDeJerarquias.sort().reverse());
+function confeccionaListadosJerarquias() {
+  const listaDeJerarquias = listaPersonal.map((efectivo) => {
+    return {
+      legajo: efectivo.legajo,
+      nombre: efectivo.nombre,
+      apellido: efectivo.apellido,
+      funcion: efectivo.jerarquia,
+    };
+  });
 }

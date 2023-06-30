@@ -5,9 +5,8 @@ function retornaJsonNuevaLista(){
   }else{
     return[]
   }
-}
-//VERIFICAR QUE ESTO ESTA FUNCIONANDO CUANDO APRIETO EL CLICK
-//TENDRIA QUE SACAR DE ESA FUNCION LA PARTE DEL CODIGO QUE ME DEVUELVE EL JSON
+} 
+
 const nuevaListaDePersonal =  retornaJsonNuevaLista()
 if (nuevaListaDePersonal.length > 0) {
         nuevaListaDePersonal.forEach(efectivo=>{
@@ -16,7 +15,7 @@ if (nuevaListaDePersonal.length > 0) {
       }  
 //FUNCION PARA PASAR JSON A ARRAY
 
-
+ 
 function crearPersonal(){
         
   let nombre = document.getElementById("nombre").value;
@@ -65,7 +64,8 @@ function ingresarAlListado () {
       }
 
 function estructuraVerificaLista(efectivo){
-      return`<br></br> 
+      return`
+      <section class="muestraListado">
       <tr>
       <td>${efectivo.funcion}</td>
         <td>${efectivo.jerarquia}</td>
@@ -73,14 +73,10 @@ function estructuraVerificaLista(efectivo){
         <td>${efectivo.nombre}</td>
         <td>${efectivo.apellido}</td>
         <td>
-        <button id=type="${efectivo.legajo}"
-        "submit">AGREGAR</button>
-        </td>
-      </tr>`
+      </tr>
+      </section>`
 }
 
-    
- 
 function eventosBotonCargar(){
        botonCargaFormulario.addEventListener("mousemove",()=>{
        botonCargaFormulario.title ="boton"
