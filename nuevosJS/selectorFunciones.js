@@ -1,3 +1,10 @@
+const cargaListaDeFunciones = document.getElementById("cargaFunciones")
+const botonChoferes = document.getElementById("botonChofer")
+const botonEncargados = document.getElementById("botonEncargado")
+const botonJefeDeServicios = document.getElementById("botonJefeDeServicios")
+const botonFaccion = document.getElementById("botonFaccion")
+const botonTareasInternas = document.getElementById("botonTareasInternas")
+
 function selectorFunciones(){
           eventosBotonChoferes()
           eventosBotonEncargados()
@@ -63,8 +70,8 @@ function eventosBotonTareasInternas(){
 /*-------------------------------------------------------------------------------*/
 
 function confeccionaListadoChoferes(){
-          cargaListaDeFunciones.innerHTML=``
-          const listaChoferes = listaPersonal.filter((efectivo)=>efectivo.funcion === "chofer".toUpperCase())
+          cargaListaDeFunciones.innerHTML=``;
+          const listaChoferes = listadoDePersonal.filter((efectivo)=>efectivo.funcion === "chofer")
           const listaSoloChoferes = listaChoferes.map((efectivo)=>{
           cargaListaDeFunciones.innerHTML += estructuraListaFunciones(efectivo)
           })
@@ -72,8 +79,8 @@ function confeccionaListadoChoferes(){
 }
 
 function confeccionaListadoEncargados(){
-          cargaListaDeFunciones.innerHTML=``
-          const listaEncargados = listaPersonal.filter((efectivo)=>efectivo.funcion === "encargado".toUpperCase())
+          cargaListaDeFunciones.innerHTML=``;
+          const listaEncargados = listadoDePersonal.filter((efectivo)=>efectivo.funcion === "encargado")
           const listaSoloEncargados = listaEncargados.map((efectivo)=>{
           cargaListaDeFunciones.innerHTML += estructuraListaFunciones(efectivo)
           })
@@ -81,8 +88,8 @@ function confeccionaListadoEncargados(){
 }
 
 function confeccionaListadoJefeDeServicio(){
-  cargaListaDeFunciones.innerHTML=``
-  const listaJefeDeServicios = listaPersonal.filter((efectivo)=>efectivo.funcion === "jefe de servicio".toUpperCase())
+  cargaListaDeFunciones.innerHTML=``;
+  const listaJefeDeServicios = listadoDePersonal.filter((efectivo)=>efectivo.funcion === "jefe de servicio")
   const listaSoloJefeDeServicios = listaJefeDeServicios.map((efectivo)=>{
   cargaListaDeFunciones.innerHTML += estructuraListaFunciones(efectivo)
   })
@@ -90,8 +97,8 @@ function confeccionaListadoJefeDeServicio(){
 }
 
 function confeccionaListadoFaccion(){
-  cargaListaDeFunciones.innerHTML=``
-  const listaFaccion = listaPersonal.filter((efectivo)=>efectivo.funcion === "faccion".toUpperCase())
+  cargaListaDeFunciones.innerHTML=``;
+  const listaFaccion = listadoDePersonal.filter((efectivo)=>efectivo.funcion === "faccion")
   const listaSoloFaccion = listaFaccion.map((efectivo)=>{
   cargaListaDeFunciones.innerHTML += estructuraListaFunciones(efectivo)
   })
@@ -99,8 +106,8 @@ function confeccionaListadoFaccion(){
 }
 
 function confeccionaListadoTareasInternas(){
-  cargaListaDeFunciones.innerHTML=``
-  const listaTareasInternas = listaPersonal.filter((efectivo)=>efectivo.funcion === "tareas internas".toUpperCase())
+  cargaListaDeFunciones.innerHTML=``;
+  const listaTareasInternas = listadoDePersonal.filter((efectivo)=>efectivo.funcion === "tareas internas")
   const listaSoloTareasInternas = listaTareasInternas.map((efectivo)=>{
   cargaListaDeFunciones.innerHTML += estructuraListaFunciones(efectivo)
   })
@@ -115,12 +122,5 @@ function estructuraListaFunciones(efectivo){
             <td>${efectivo.legajo}</td>
             <td>${efectivo.nombre}</td>
             <td>${efectivo.apellido}</td>
-            <td>
-            <button id="${efectivo.legajo}"
-            "submit">AGREGAR</button>
-            </td>
           </tr>`
-}
-
-
-
+} 

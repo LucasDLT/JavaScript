@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../estilosNuevo.css" />
+    <script   src="../nuevosJS/datosGenerales.js"></script>
+    <script defer src="../nuevosJS/selectorFunciones.js"></script>
+
+    <title>Listado de Funciones</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Selecciona la funcion que deseas visualizar</h1>
+    </header>
+    <main>
+      <section>
+        <ul>
+          <li><button type="submit" id="botonJefeDeServicios">JEFE DE SERVICIOS</button></li>
+          <li><button type="submit" id="botonTareasInternas">TAREAS INTERNAS</button></li>
+          <li><button type="submit" id="botonEncargado">ENCARGADO</button></li>
+          <li><button type="submit" id="botonFaccion">FACCION</button></li>
+          <li><button type="submit" id="botonChofer">CHOFER</button></li>
+        </ul>
+      </section>
+      <section id="cargaFunciones"></section>
+    </main>
+  </body>
+</html>

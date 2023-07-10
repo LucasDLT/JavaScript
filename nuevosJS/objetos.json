@@ -1,0 +1,212 @@
+[
+   {
+      "nombre":"paula", 
+      "apellido":"gomez",
+      "jerarquia":"oficial",
+      "legajo":1114,
+      "totalDias" :11, 
+      "funcion":"faccion",
+      "faltas":8,
+      "sanciones":5
+   },
+   {
+      "nombre":"sebastian",
+      "apellido":"perez",
+      "jerarquia":"oficial",
+      "legajo":222,
+      "totalDias":11,
+      "funcion": "faccion",
+      "faltas":5,
+      "sanciones":8
+   }, 
+   {
+      "nombre":"lucas",
+      "apellido": "sastre",
+      "jerarquia": "oficial",
+      "legajo": 1234, 
+      "totalDias":11, 
+      "funcion":"faccion", 
+      "faltas":1,
+      "sanciones":1
+   },
+   {
+      "nombre":"paula", 
+      "apellido":"soto", 
+      "jerarquia":"oficial",
+      "legajo": 1131,
+      "totalDias": 11, 
+      "funcion":"faccion",
+      "faltas":4,
+      "sanciones":5
+   },
+   {
+      "nombre":"paula", 
+      "apellido":"persa",
+      "jerarquia": "oficial primero", 
+      "legajo":1141, 
+      "totalDias":11, 
+      "funcion":"faccion",
+      "faltas": 4, 
+      "sanciones":5
+   },
+   {
+      "nombre":"nahuel",
+      "apellido": "monte",
+      "jerarquia": "oficial mayor", 
+      "legajo":3453,
+      "totalDias": 15,
+      "funcion": "chofer", 
+      "faltas":0, 
+      "sanciones":0
+   },
+   {
+      "nombre":"cristian", 
+      "apellido":"navarro",
+      "jerarquia": "oficial mayor",
+      "legajo": 1155, 
+      "totalDias":15,
+      "funcion": "chofer",
+      "faltas": 3, 
+      "sanciones":3
+   },
+   {
+      "nombre":"nahuel",
+      "apellido": "chamorro", 
+      "jerarquia": "oficial mayor",
+      "legajo": 1355,
+      "totalDias":15,
+      "funcion": "chofer",
+      "faltas": 3, 
+      "sanciones":3
+   },
+   {
+      "nombre":"nahuel",
+      "apellido": "chamorro", 
+      "jerarquia": "oficial mayor",
+      "legajo": 1355,
+      "totalDias":15,
+      "funcion": "chofer",
+      "faltas": 3, 
+      "sanciones":3
+   },
+   {
+      "nombre":"cristian",
+      "apellido":  "paz",
+      "jerarquia":  "oficial mayor", 
+      "legajo": 1145,
+      "totalDias": 15, 
+      "funcion": "chofer",
+      "faltas":0, 
+      "sanciones":1
+
+   },
+   {
+      "nombre":"cristian", 
+      "apellido": "paz", 
+      "jerarquia": "oficial mayor", 
+      "legajo":1145,
+      "totalDias": 15, 
+      "funcion": "chofer",
+      "faltas":0 , 
+      "sanciones":1
+   },
+   {
+      "nombre":"alejandro",
+      "apellido":  "galarza", 
+      "jerarquia":"inspector", 
+      "legajo": 1955, 
+      "totalDias":21, 
+      "funcion": "encargado", 
+      "faltas": 0, 
+      "sanciones":0
+   },
+   {
+      "nombre":"carlos", 
+      "apellido":"benitez",
+      "jerarquia":  "inspector", 
+      "legajo": 1105,
+      "totalDias": 21,
+      "funcion":  "encargado",
+      "faltas":  0, 
+      "sanciones":0
+   },
+   {
+      "nombre":"celeste", 
+      "apellido": "toribio", 
+      "jerarquia": "inspector",
+      "legajo":  105, 
+      "totalDias":21, 
+      "funcion":"encargado",
+      "faltas": 0, 
+      "sanciones":0
+   },
+   {
+      "nombre":"pablo",
+      "apellido":  "plantez",
+      "jerarquia":  "inspector",
+      "legajo": 4105, 
+      "totalDias":21, 
+      "funcion": "encargado", 
+      "faltas":6 , 
+      "sanciones":0
+   },
+   {
+      "nombre":"ariel", 
+      "apellido": "pereyra",
+      "jerarquia": "inspector",
+      "legajo":  1553, 
+      "totalDias":21,
+      "funcion": "encargado",
+      "faltas": 0, 
+      "sanciones":0
+   },
+   {  
+      "nombre":"pablo",
+      "apellido":  "rodriguez",  
+      "jerarquia":"principal",
+      "legajo":  1765, 
+      "totalDias":25, 
+      "funcion": "jefe de servicio",
+      "faltas": 4, 
+      "sanciones":2
+   },
+   {
+      "nombre":"gustavo",
+      "apellido": "machaquita", 
+      "jerarquia":"oficial" ,
+      "legajo": 1746,
+      "totalDias":11,
+      "funcion":"tareas internas" ,
+      "faltas":1 , 
+      "sanciones":5
+   },
+   {  "nombre":"milhouse",
+      "apellido":"mamani" , 
+      "jerarquia": "oficial",
+      "legajo":2343 ,
+      "totalDias":11,
+      "funcion":"tareas internas" ,
+      "faltas": 5, 
+      "sanciones":7
+   },
+   {
+      "nombre":"leandro",
+      "apellido": "godoy", 
+      "jerarquia": "oficial",
+      "legajo":5234,
+      "totalDias":11,
+      "funcion": "tareas internas",
+      "faltas":8 , 
+      "sanciones":9
+   },
+   {  "nombre":"marcelo",
+      "apellido": "toro", 
+      "jerarquia": "oficial",
+      "legajo": 2333,
+      "totalDias":11,
+      "funcion":"tareas internas" ,
+      "faltas": 1, 
+      "sanciones":10
+   }
+
+]

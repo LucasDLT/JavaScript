@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="../estilosNuevo.css" />
+    <script  src="../nuevosJS/datosGenerales.js"></script>
+    <script defer src="../nuevosJS/licencias.js"></script>
+    <title>LICENCIAS</title>
+  </head>
+  <body class="body">
+    <header class="contenedorTitulo">
+      <h1 class="tituloPrincipal">
+LICENCIAS    </h1>
+    </header>
+
+    <nav class="buscador">
+    
+        <p class="inputLicencias"
+          >LICENCIAS: Busca al efectivo filtrando su legajo personal y gestiona
+          su licencia anual :</a
+        >
+          <input id="inputLicencias"
+            class="inputLicencias"
+            type="number"
+            placeholder="ingresa 1114"
+            aria-label="Search"
+          />
+          <button id="botonLicencias" class="btn btn-outline-primary" type="button">BUSCAR</button>
+    </nav>
+    <div class="contenedor">
+                       
+      <div id="contenedorLicencia"class="contenedorLicencia">
+          <h5 class="tituloLicencia">DATOS PERSONALES</h5>
+      </div>
+
+      <div class="contenedorNota">
+          <h5 class="tituloLicencia">NOTA DE SOLICITUD</h5>
+          <p id="nota" class="card-text">
+            aca se va a cargar el modelo de la nota
+          </p>
+        </div>
+      </div>
+  </body>
+</html>
