@@ -65,15 +65,13 @@ function ingresoListadoyJson() {
 function retornaEstructuraVerificadora(efectivo){   
           return`         <section class="contenedorListado">
 
-          <lu>${efectivo.legajo}</lu>
-          <lu>${efectivo.jerarquia}</lu>
-          <lu>${efectivo.nombre}</lu>
-          <lu>${efectivo.apellido}</lu>
-          <lu>${efectivo.funcion}</lu>  
+          <li>${efectivo.legajo}</li>
+          <li>${efectivo.jerarquia}</li>
+          <li>${efectivo.nombre}</li>
+          <li>${efectivo.apellido}</li>
+          <li>${efectivo.funcion}</li>  
           </section>          
            `
-          
-
 }
 
 function eventosCargarFormulario() {

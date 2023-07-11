@@ -4,75 +4,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/modern-age" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/flipahaus" rel="stylesheet">
+                
   <link rel="stylesheet" href="../estilosNuevo.css" />
   <script defer src="../nuevosJS/administrador.js"></script>
   <title>ADMINISTRAR PERSONAL</title>
 </head>
 
 <body>
-  <header class="contenedorTitulo">
-    <h1 class="titulo">CARGA DE PERSONAL</h1>
+  <header class="contenedorTituloDatos">
+    <h1 class="tituloPrincipal">CARGA DE PERSONAL</h1>
   </header>
-  
-    <div class="contenedor">
 
-        <h4 class="tituloLicencia">
-          INGRESAR DATOS
-        </h4>
-        <fieldset>
-          <form id="formulario" class="contenedorLicencia">
-            <ul>
-              <li>
-                <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" id="nombreForm" />
-              </li>
-              <li>
-                <label for="apellido">Apellido:</label>
-                <input type="text" name="apellido" id="apellidoForm" />
-              </li>
-              <li>
-                <label for="jerarquia">Jerarquia:</label>
-                <input type="text" name="jerarquia" id="jerarquiaForm" />
-              </li>
-              <li>
-                <label for="legajo">Legajo:</label>
-                <input type="number" id="legajoForm" />
-              </li>
-              <li>
-                <label for="total dias">Total de dias:</label>
-                <input type="number" id="totalDiasForm" />
-              </li>
-              <li>
-                <label for="funcion">Funcion:</label>
-                <input type="text" id="funcionForm" />
-              </li>
-              <li>
-                <label for="faltas">Faltas:</label>
-                <input type="number" id="faltasForm" />
-              </li>
-              <li>
-                <label for="sanciones">Sanciones:</label>
-                <input type="number" id="sancionesForm" />
-              </li>
-              <button type="submit" id="cargarForm" >CARGAR FORMULARIO</button>
-              <button type="reset" id="limpiarForm">LIMPIAR FORMULARIO</button>
-            </ul>
+  <div class="contenedor">
 
-          </form>
-        </fieldset>
+    <fieldset class="contenedorFormulario">
+      <h4 class="tituloDatos">
+        INGRESAR DATOS
+      </h4>
+      <form id="formulario" >
+        <ul>
+          <li>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombreForm" />
+          </li>
+          <li>
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" id="apellidoForm" />
+          </li>
+          <li>
+            <label for="jerarquia">Jerarquia:</label>
+            <input type="text" name="jerarquia" id="jerarquiaForm" />
+          </li>
+          <li>
+            <label for="legajo">Legajo:</label>
+            <input type="number" id="legajoForm" />
+          </li>
+          <li>
+            <label for="total dias">Total de dias:</label>
+            <input type="number" id="totalDiasForm" />
+          </li>
+          <li>
+            <label for="funcion">Funcion:</label>
+            <input type="text" id="funcionForm" />
+          </li>
+          <li>
+            <label for="faltas">Faltas:</label>
+            <input type="number" id="faltasForm" />
+          </li>
+          <li>
+            <label for="sanciones">Sanciones:</label>
+            <input type="number" id="sancionesForm" />
+          </li>
+          <button type="submit" id="cargarForm">CARGAR </button>
+          <button type="reset" id="limpiarForm">LIMPIAR </button>
+        </ul>
 
-    </div>
+      </form>
+    </fieldset>
 
-    <div id="listadoCompleto"  class="contenedorLicencia">
-      <h4 class="tituloLicencia">
+    <div class="contenedorListadoCompleto">
+      <h4 class="tituloDatos">
         LISTA GENERAL
       </h4>
 
+      <ul id="listadoCompleto">
 
-   </div>
+      </ul>
+    </div>
+  </div>
+
 </body>
 
 </html>

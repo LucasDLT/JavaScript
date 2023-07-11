@@ -3,43 +3,76 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
-  font-family: 'Orbitron', sans-serif;  
+  
+   
 }
-
 .contenedorTitulo{
           display: flex;
           flex-direction: column;
-          margin: 1rem;
-          background-color: #000000;
-          color: white;
-          border-radius: 5px;                    
+          margin-top: 20rem;
+          color: black;
+          border-radius: 5px; 
 }
 .tituloPrincipal{
           margin: 10px;
-          font-size: 39px;
+          font-size: 3rem;
           text-align: center;
+          font-family: 'Modern Age', sans-serif;        
+}
+body{
+  background-image: url(/img/fondo.jpg);
+}
+button{
+  border: none;
+  background: transparent;
+  font-size: 1.7rem;
+  font-family: 'Modern Age', sans-serif;
+}
+button:hover{
+ font-size: 1.8rem;
 }
 /*___________________________________________________________________*/
 
 
-
-.contenedorTitulo{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  font-weight: bolder;
-  font-size: larger;
+.contenedorTitulo {
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
+ @-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
 .mainSelectorInicial{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   font-weight: bolder;
+  border-radius: 10PX;
   align-items: center;
-  justify-content: space-around;
-  border: solid;
-  margin: 5rem;
+  justify-content: space-between;
+  margin: 1rem;
+  height: 15rem;
 }
-
 .tarjeta{
   height: 100%;
   width: 20rem;
@@ -49,15 +82,17 @@
   flex-direction: column;
   border-radius: 10px;
   align-items:center;
-  justify-content:flex-end;
-  border: solid;
+  justify-content:center;
+  justify-items:left;
 }
-
 .descripcion{
-  display: flex;
+  display: none;
   padding: 10px;
+  text-align: center;
+  text-shadow: 1px 1px rgb(26, 55, 55);
+  font-family: 'Flipahaus', sans-serif;
+                                                                                                
 }
-
 .mainUsuario{
   display: flex;
   flex-direction: row;
@@ -68,13 +103,11 @@
   margin: 5rem;
   padding: 1rem;
 }
-
 .tarjetaUsuario{
  display: flex;
  flex-direction: column;
  margin: 5px;
 }
-
 .descripcionUsuario{
   display: flex;
   flex-direction: column;
@@ -83,7 +116,6 @@
   align-items: center;
   padding: 10px;
 }
-
 .buscador{
 border: solid;
 padding: 5px;
@@ -93,7 +125,6 @@ justify-content: center;
 align-items: center;
 margin: 10px;
 }
-
 .body{
   padding: 10px;
 }
@@ -107,7 +138,6 @@ margin: 10px;
   justify-content: space-around;
   align-items: center;
   border: solid;
-
 }
 .contenedorLicencia{
   display: flex;
@@ -129,7 +159,6 @@ width: 50rem;
 margin: 10px;
 padding: 5px;
 }
-
 .contenedorConcepto{
 display: flex;
 flex-wrap: wrap;
@@ -138,79 +167,24 @@ padding: 5px;
 justify-content: center;
 align-items:start ;
 }
+/*aca cambiar la letra*/
 .contenedorListado{
-  border: solid;
   width: 30rem;
-  justify-content: right;
+  display: flex;
+  font-family: 'Flipahaus'; 
+  justify-content: space-between;
 }
-/*CONTENEDOR CARDS
-.card-group{
-          background-color: lightblue;
-          height: 40rem;
-          margin: 10px;
-          border-radius: 10px;
-          display: flex;
-          align-items: center;
-          justify-content: space-around;
-          background-image: url(/img/fondo.jpg);
+.tituloDatos{
+  font-family: 'Flipahaus', sans-serif;                                               
 }
-
-.card{
-          margin: 20px;
-          background-color: rgba(139, 141, 142, 0.585);
-          height: 31rem;
-          display: flex;
-          border-radius: 10px;
+.contenedorFormulario{
+  font-family: 'Flipahaus', sans-serif;                                              
 }
-.card-title{
-          font-weight: bolder;
-          font-size: larger;
+/*
+overflow-y: scroll;
+overflow-x:hidden;*/
+.contenedorListadoCompleto{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
-
-.card-text{
-          text-align: justify;
-}
-
-.card-img-top{
-          border-radius: 10px;
-}
-
-
-.navbar-bg-body-tertiary{
-          font-size: 26px;
-          margin: 10rem;
-}
-
-#table{
-          border-radius: 5px;
-          background-color: rgba(7, 10, 24, 0.51);
-          font-size: larger;
-          font-weight: bolder;
-}
-
-
-.body{
-          display: flex;
-          flex-direction: column;
-          background-image: url(img/fondo.jpg);
-          backdrop-filter: blur(20px);
-
-}
-.formulario{
-          border: solid;
-          display: flex;
-          align-items: center;
-}
-.card{
-          display: flex;
-          height: 30rem; 
-                   
-}
-.borde{
-          border: solid;
-          height: 25rem;
-}
-input{
-          backdrop-filter: blur(20px);
-
-}*/
